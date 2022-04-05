@@ -3,7 +3,7 @@
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-weight: normal;
   background: none;
   box-sizing: border-box;
 }
@@ -14,8 +14,9 @@ ul {
 }
 
 body {
-    padding: 40px;
+  padding: 40px;
 }
+
 h1 {
   font-size: 2rem;
   margin-bottom: 50px;
@@ -30,8 +31,6 @@ main {
 h2 {
   font-size: 1.6rem;
 }
-
-
 
 .display {
   display: flex;
@@ -53,11 +52,12 @@ button {
 .score-list {
   border: 2px solid black;
 }
-.score-list > li{
+
+.score-list > li {
   padding: 10px;
 }
 
-.score-list > li:nth-child(even){
+.score-list > li:nth-child(even) {
   background-color: #f2f2f2;
 }
 
@@ -78,6 +78,7 @@ form {
   justify-items: flex-end;
   gap: 20px;
 }
+
 input {
   width: 100%;
   padding: 5px;
