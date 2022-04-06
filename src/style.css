@@ -74,7 +74,7 @@ label {
 form {
   width: 70%;
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto;
   justify-items: flex-end;
   gap: 20px;
 }
@@ -84,4 +84,18 @@ input {
   padding: 5px;
   font-size: 1.2em;
   border: 2px solid black;
+}
+
+.success {
+  text-align: center;
+  justify-self: center;
+}
+
+.rotate-submit, .rotate-refresh {
+  display: none;
+  margin-right: 20px;
+}
+
+.fa-spinner {
+  animation: fa-spin 2s infinite linear;
 }
