@@ -6,8 +6,7 @@ const form = document.getElementById('form');
 const scoresList = document.querySelector('.score-list');
 const name = document.getElementById('name');
 const score = document.getElementById('score');
-
-refreshBtn.addEventListener('click', () => {
+const loadScores = () => {
   document.querySelector('.rotate-refresh').style.display = 'inline-block';
   getScore().then((data) => {
     const scores = data.result;
@@ -17,6 +16,14 @@ refreshBtn.addEventListener('click', () => {
     });
   });
   setTimeout(() => { document.querySelector('.rotate-refresh').style.display = 'none'; }, 1500);
+};
+
+refreshBtn.addEventListener('click', () => {
+  loadScores();
+});
+
+window.addEventListener('load', () => {
+  loadScores();
 });
 
 form.addEventListener('submit', async (e) => {
@@ -31,4 +38,5 @@ form.addEventListener('submit', async (e) => {
   });
   form.reset();
   setTimeout(() => { document.querySelector('.rotate-submit').style.display = 'none'; }, 1000);
+  loadScores();
 });
