@@ -91,7 +91,8 @@ input {
   justify-self: center;
 }
 
-.rotate-submit, .rotate-refresh {
+.rotate-submit,
+.rotate-refresh {
   display: none;
   margin-right: 20px;
 }

@@ -4,22 +4,20 @@ import { addScore, getScore } from './apiCall.js';
 const refreshBtn = document.getElementById('refresh');
 const form = document.getElementById('form');
 const scoresList = document.querySelector('.score-list');
-const name = document.getElementById('name')
-const score = document.getElementById('score')
-
+const name = document.getElementById('name');
+const score = document.getElementById('score');
 
 refreshBtn.addEventListener('click', () => {
   document.querySelector('.rotate-refresh').style.display = 'inline-block';
-  getScore().then(data => {
+  getScore().then((data) => {
     const scores = data.result;
     scoresList.innerHTML = '';
-    scores.forEach(item => {
+    scores.forEach((item) => {
       scoresList.innerHTML += `<li>${item.user}: ${item.score}</li>`;
-    })
-  })
-  setTimeout(() => { document.querySelector('.rotate-refresh').style.display = 'none' }, 1500);
-  
-})
+    });
+  });
+  setTimeout(() => { document.querySelector('.rotate-refresh').style.display = 'none'; }, 1500);
+});
 
 form.addEventListener('submit', async (e) => {
   const success = document.querySelector('.success');
@@ -30,7 +28,7 @@ form.addEventListener('submit', async (e) => {
     setTimeout(() => {
       success.style.display = 'none';
     }, 2500);
-  })
-  form.reset()
-  setTimeout(() => { document.querySelector('.rotate-submit').style.display = 'none' }, 1000);
+  });
+  form.reset();
+  setTimeout(() => { document.querySelector('.rotate-submit').style.display = 'none'; }, 1000);
 });
