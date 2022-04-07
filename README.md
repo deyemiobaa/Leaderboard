@@ -2,11 +2,16 @@
 
 > The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
+
 ### Built With
 
 - Major languages: HTML, CSS, JavaScript
 - Frameworks: N/A
 - Technologies used: Webpack, API
+
+### You can view it live [here](https://deyemiobaa.github.io/Leaderboard/)
+
+<img src="src/app-sc.png" alt="Project Snapshot">
 
 ### Prerequisites
 
