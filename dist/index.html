@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
+    <script src="https://kit.fontawesome.com/eb94992e2c.js" crossorigin="anonymous"></script>
   <script defer src="main.js"></script></head>
 
   <body>
@@ -13,16 +14,15 @@
       <section class="display-scores">
         <div class="display header">
           <h2>Recent scores</h2>
-          <button id="refresh" type="button">Refresh</button>
+          <div>
+            <span class="rotate-refresh">
+              <i class="fa-solid fa-spinner"></i>
+            </span>
+            <button id="refresh" type="button">Refresh</button>
+          </div>
         </div>
         <ul class="score-list">
-          <li>Sodiq: 100</li>
-          <li>Sodiq: 100</li>
-          <li>Sodiq: 100</li>
-          <li>Sodiq: 100</li>
-          <li>Sodiq: 100</li>
-          <li>Sodiq: 100</li>
-          <li>Sodiq: 100</li>
+
         </ul>
       </section>
       <div class="divider"></div>
@@ -30,12 +30,18 @@
         <div class="display scores">
           <h2>Add your score</h2>
         </div>
-        <form>
+        <form id="form">
+          <span class="success"></span>
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name" placeholder="Your name:">
+          <input type="text" name="name" id="name" placeholder="Your name:" required>
           <label for="score">Score:</label>
-          <input type="text" name="score" id="score" placeholder="Your score:">
-          <button type="submit" id="submit">Submit</button>
+          <input type="number" name="score" id="score" placeholder="Your score:" required>
+          <div>
+            <span class="rotate-submit">
+              <i class="fa-solid fa-spinner"></i>
+            </span>
+            <button type="submit" id="submit">Submit</button>
+          </div>
         </form>
       </section>
     </main>
